@@ -1,0 +1,49 @@
+env: [REDACTED]  # e.g., Industry Construction-Private-Deployment-Beijing HealthCare
+is_super_work: false
+is_new_super_tenant: false
+host:
+  rental: https://[REDACTED]-rental.[REDACTED].cn/
+  passport: https://[REDACTED]-passport.[REDACTED].cn/
+  print: https://[REDACTED]-print.[REDACTED].cn/
+  app: https://[REDACTED]-merchants.[REDACTED].cn
+
+
+app_type: [REDACTED]  # e.g., smart_ykj
+login_account:
+  code: [REDACTED]
+  username: [REDACTED]
+  password: [REDACTED]
+  org_name: [REDACTED]  # e.g., China HealthCare Group
+  user_id: [REDACTED]  # UUID redacted
+  org_id: [REDACTED]   # UUID redacted
+inspect:
+  asset_task_template_name: [REDACTED]  # e.g., Asset automated inspection task template
+  plan_unit_task_template_name: [REDACTED]  # e.g., Planning unit automated inspection task template
+  project_task_template_name: [REDACTED]  # e.g., Project automated inspection task template
+  form_name: [REDACTED]  # e.g., Automated inspection form
+rental_version: 2
+data_core_switch: 1
+database:
+  host: [REDACTED]  # IP redacted
+  port: 3306
+  user: [REDACTED]
+  passwd: [REDACTED]  # Credentials redacted
+  db: [REDACTED]      # Database name redacted
+  is_ssh: false
+  ssh_ip: None
+  ssh_port: None
+  ssh_user: None
+  ssh_passwd: None
+  remote_host: None
+mongoDB_database:
+  host: [REDACTED]  # K8s service name redacted
+  port: 27017
+  user: [REDACTED]
+  passwd: [REDACTED]  # Credentials redacted
+  contract_db: [REDACTED]  # DB name redacted
+  charge_db: [REDACTED]    # DB name redacted
+file_upload_config:
+  is_minio: true
+timeout:
+  getTimeout: 1000
+  postTimeout: 3000
