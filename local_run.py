@@ -1,13 +1,3 @@
-def rental_run():
-    run_test(
-        test_env="[REDACTED]",  # e.g., prod_gbnuat
-        case_path="testcase_scene/testcase_v2",
-        keyword="bvt",
-        weixin_group="[REDACTED]",  # e.g., API 100% coverage achieved - Rental
-        remark="[REDACTED]",  # e.g., Gansu Urban Investment New Project
-        send_mail=False, send_weixin_message=True, open_report=False, cmd=False  # When cmd=True, reads environment info from pytest.ini
-    )
-
 def run_test(test_env=None, markers=None, keyword=None, case_path=None, gen_report=True, send_mail=False,
              user_list: list = None, send_weixin_message=False, weixin_group=None, webhook_url=None, open_report=True,
              remark=None, cmd=True, thread_count=None, report_time=None, collect_api=False):
@@ -153,6 +143,16 @@ def send_qyweixin_message(group=None, webhook_url=None, content: str = ""):
                 send_message(key=webhook_url_key, content=content, group_name=webhook)
             except Exception as err:
                 logger.error_without_fail(f"Failed to extract webhook_url_key. Please verify webhook_url is correct [{webhook}]: {err}")
+
+def rental_run():
+    run_test(
+        test_env="[REDACTED]",  # e.g., prod_gbnuat
+        case_path="testcase_scene/testcase_v2",
+        keyword="bvt",
+        weixin_group="[REDACTED]",  # e.g., API 100% coverage achieved - Rental
+        remark="[REDACTED]",  # e.g., Gansu Urban Investment New Project
+        send_mail=False, send_weixin_message=True, open_report=False, cmd=False  # When cmd=True, reads environment info from pytest.ini
+    )
 
 if __name__ == '__main__':
     rental_run()
