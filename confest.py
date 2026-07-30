@@ -6,8 +6,7 @@ conf_init = envConfig
 
 # Load YAML configuration path
 yaml_path = EnvConfig().conf_init(file_flag=True)
-user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 " \
-             "Safari/537.36 "
+user_agent = " "
 
 
 @pytest.fixture(scope="session")
